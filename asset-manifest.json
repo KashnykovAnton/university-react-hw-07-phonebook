@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/react-template/static/css/main.7acaea2f.css",
-    "main.js": "/react-template/static/js/main.1c37b54a.js",
-    "index.html": "/react-template/index.html",
-    "main.7acaea2f.css.map": "/react-template/static/css/main.7acaea2f.css.map",
-    "main.1c37b54a.js.map": "/react-template/static/js/main.1c37b54a.js.map"
+    "main.css": "/university-react-hw-06-phonebook/static/css/main.352a5d1a.css",
+    "main.js": "/university-react-hw-06-phonebook/static/js/main.d47a0856.js",
+    "static/media/paper-texture.jpg": "/university-react-hw-06-phonebook/static/media/paper-texture.5d2a4fc8f48c1baa8915.jpg",
+    "static/media/texture-pencil.jpg": "/university-react-hw-06-phonebook/static/media/texture-pencil.e5742434d208594352e8.jpg",
+    "index.html": "/university-react-hw-06-phonebook/index.html",
+    "main.352a5d1a.css.map": "/university-react-hw-06-phonebook/static/css/main.352a5d1a.css.map",
+    "main.d47a0856.js.map": "/university-react-hw-06-phonebook/static/js/main.d47a0856.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.1c37b54a.js"
+    "static/css/main.352a5d1a.css",
+    "static/js/main.d47a0856.js"
   ]
 }
