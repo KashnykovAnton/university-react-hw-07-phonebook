@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import ContactForm from './components/ContactForm';
 import ContactList from './components/ContactList';
 import Filter from './components/Filter';
-import { getContacts } from 'store/selectors';
+import { getContacts } from 'store/contacts/contacts-selectors';
 import './App.css';
 
 const App = () => {
@@ -14,11 +14,7 @@ const App = () => {
       <ContactForm />
       <div className="Container ContactsListSection ">
         <h2 className="ContactsHeader">Contacts</h2>
-        {contacts.length !== 0 ? (
-          <Filter />
-        ) : (
-          <p>There are no contacts in the phone book!</p>
-        )}
+        {contacts.length !== 0 && <Filter />}
         <ContactList />
       </div>
     </div>

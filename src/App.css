@@ -105,7 +105,7 @@ ul {
   border-radius: 5px;
   box-shadow: 0 2px 0 #41403e;
   transition: padding 0.1s, box-shadow 0.1s, top 0.1s;
-  background-image: url("../src/images/texture-pencil.jpg");
+  background-image: url("../src/images/pencil-texture.jpg");
   background-size: cover;
   &:active {
     top: 4px;

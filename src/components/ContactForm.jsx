@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'store/contactsSlice/contactsSlice';
-import { getContacts } from 'store/selectors';
+import { getContacts } from 'store/contacts/contacts-selectors';
+import { fetchContact, addContact } from 'store/contacts/contacts-thunks';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -9,6 +9,10 @@ const ContactForm = () => {
 
   const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContact());
+  }, [dispatch]);
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -54,7 +58,6 @@ const ContactForm = () => {
           className="Input"
           type="text"
           name="name"
-          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           placeholder="Please enter name"
           required
@@ -68,7 +71,6 @@ const ContactForm = () => {
           className="Input"
           type="tel"
           name="number"
-          pattern="\+?\d{1,4}?[-\.\s]?\(?\d{1,3}?\)?[-\.\s]?\d{1,4}[-\.\s]?\d{1,4}[-\.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           placeholder="Please enter number"
           required

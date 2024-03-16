@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { filterContact } from 'store/filterSlice/filterSlice';
-import { getFilter } from 'store/selectors';
+import { filterContact } from 'store/contacts/contacts-slice-filter';
+import { getFilter } from 'store/contacts/contacts-selectors';
 
 const Filter = () => {
   const filter = useSelector(getFilter);
@@ -21,7 +21,6 @@ const Filter = () => {
         className="Input"
         type="text"
         name="filter"
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
         placeholder="Filter contacts here"
         onChange={changeFilter}
         value={filter}

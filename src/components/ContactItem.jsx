@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'store/contactsSlice/contactsSlice';
+import { deleteContact } from 'store/contacts/contacts-thunks';
 
 const ContactItem = ({ id, name, number }) => {
   const dispatch = useDispatch();
